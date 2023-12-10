@@ -3,6 +3,7 @@ import 'Pages/login_view.dart';
 
 void main()
 {
+  // Running the app
   runApp(const MyApp());
 }
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget
   {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      // Setting the LoginPage as a starting Page.
       home: LoginPage(),
     );
   }

@@ -7,6 +7,7 @@ class LoginPage extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+    // Interface name user widget
     return Scaffold();
   }
 }
