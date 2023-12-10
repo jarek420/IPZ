@@ -8,10 +8,10 @@ class LoginPage extends StatelessWidget
   Widget build(BuildContext context)
   {
     // Interface name user widget
-    return Scaffold
+    return const Scaffold
     (
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      body: const SafeArea(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      body: SafeArea(
         child: Center(
           child: Column(
             children: [
@@ -27,9 +27,23 @@ class LoginPage extends StatelessWidget
 
                // Welcome back notification 
                Text('Witaj z powrotem!',
-               style: TextStyle(color: Color.fromARGB(255, 121, 121, 121)),
-               )
+               style: TextStyle(color: Color.fromARGB(255, 121, 121, 121),
+               fontSize: 16,),
+               ),
 
+               SizedBox(height: 25),
+              
+              // Login textfield with a frame decoration that changes after we click on em
+               TextField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color.fromARGB(255, 121, 121, 121)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+               ),
             ],
             ),
         ),
