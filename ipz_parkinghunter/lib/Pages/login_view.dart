@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
 
 class LoginPage extends StatelessWidget
@@ -15,28 +16,28 @@ class LoginPage extends StatelessWidget
     // Interface name user widget
     return  Scaffold
     (
-      backgroundColor: Color.fromARGB(247, 247, 247, 247),
+      backgroundColor: const Color.fromARGB(247, 247, 247, 247),
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
-               SizedBox(height: 50),
+               const SizedBox(height: 50),
 
               // logo
-               Icon(
+               const Icon(
                 Icons.lock,
                 size: 100,
                ),
 
-               SizedBox(height: 50),
+               const SizedBox(height: 50),
 
                // Welcome back notification 
-               Text('Witaj z powrotem!',
+               const Text('Witaj z powrotem!',
                style: TextStyle(color: Color.fromARGB(255, 107, 107, 107),
                fontSize: 16,),
                ),
 
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
 
               // Username field
               LoginTextField(
@@ -45,8 +46,7 @@ class LoginPage extends StatelessWidget
                 obscureText: false,
               ),
               
-
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               
               // Password texbox
               LoginTextField(
@@ -54,6 +54,21 @@ class LoginPage extends StatelessWidget
                 hintText: 'Haslo',
                 obscureText: true,
               ),
+
+              const SizedBox(height: 10),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Zapomniales hasła?',
+                    style: TextStyle(color: Color.fromARGB(255, 107, 107, 107),),),
+                  ],
+                ),
+              ),
+              SizedBox(height: 25),
+
+              LoginButton(),
             ],
             ),
         ),

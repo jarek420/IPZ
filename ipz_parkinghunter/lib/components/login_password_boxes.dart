@@ -39,6 +39,5 @@ class LoginTextField extends StatelessWidget
                   ),
                  ),
                );
-    
   }
 }
