@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
 
 class LoginPage extends StatelessWidget
 {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  // text editting controllers
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context)
   {
     // Interface name user widget
-    return const Scaffold
+    return  Scaffold
     (
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Color.fromARGB(247, 247, 247, 247),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -27,23 +32,28 @@ class LoginPage extends StatelessWidget
 
                // Welcome back notification 
                Text('Witaj z powrotem!',
-               style: TextStyle(color: Color.fromARGB(255, 121, 121, 121),
+               style: TextStyle(color: Color.fromARGB(57, 62, 70, 70),
                fontSize: 16,),
                ),
 
-               SizedBox(height: 25),
+              SizedBox(height: 25),
+
+              // Username field
+              LoginTextField(
+                controller: usernameController,
+                hintText: 'Login',
+                obscureText: false,
+              ),
               
-              // Login textfield with a frame decoration that changes after we click on em
-               TextField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color.fromARGB(255, 121, 121, 121)),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                ),
-               ),
+
+              SizedBox(height: 10),
+              
+              // Password texbox
+              LoginTextField(
+                controller: passwordController,
+                hintText: 'Haslo',
+                obscureText: true,
+              ),
             ],
             ),
         ),
