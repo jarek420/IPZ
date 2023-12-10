@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget
 
                // Welcome back notification 
                Text('Witaj z powrotem!',
-               style: TextStyle(color: Color.fromARGB(57, 62, 70, 70),
+               style: TextStyle(color: Color.fromARGB(255, 107, 107, 107),
                fontSize: 16,),
                ),
 
