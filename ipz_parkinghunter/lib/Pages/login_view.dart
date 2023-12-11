@@ -10,6 +10,8 @@ class LoginPage extends StatelessWidget
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+  // sign user in method
+  void SignUserIn() {}
   @override
   Widget build(BuildContext context)
   {
@@ -25,8 +27,8 @@ class LoginPage extends StatelessWidget
 
               // logo
                const Icon(
-                Icons.lock,
-                size: 100,
+                Icons.account_circle_sharp,
+                size: 150,
                ),
 
                const SizedBox(height: 50),
@@ -68,7 +70,38 @@ class LoginPage extends StatelessWidget
               ),
               SizedBox(height: 25),
 
-              LoginButton(),
+              LoginButton(
+                onTap: SignUserIn,
+              ),
+
+              const SizedBox(height: 50),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Color.fromARGB(255, 107, 107, 107),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        'Or continue with',
+                        style: TextStyle(color: Color.fromARGB(255, 107, 107, 107)),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
             ),
         ),
