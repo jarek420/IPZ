@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
+import 'package:ipz_parkinghunter/components/login_square_tile.dart';
 
 class LoginPage extends StatelessWidget
 {
@@ -58,6 +59,7 @@ class LoginPage extends StatelessWidget
               ),
 
               const SizedBox(height: 10),
+
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -68,7 +70,8 @@ class LoginPage extends StatelessWidget
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              
+              const SizedBox(height: 25),
 
               LoginButton(
                 onTap: SignUserIn,
@@ -89,7 +92,7 @@ class LoginPage extends StatelessWidget
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Or continue with',
+                        'Lub zaloguj sie za pomoca',
                         style: TextStyle(color: Color.fromARGB(255, 107, 107, 107)),
                       ),
                     ),
@@ -102,6 +105,35 @@ class LoginPage extends StatelessWidget
                   ],
                 ),
               ),
+
+              const SizedBox(height: 50),
+
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // google button
+                 SquareTile(imagePath: 'lib/images/google.png'),
+
+                 // apple button
+                 const SizedBox(width: 25),
+
+                 SquareTile(imagePath: 'lib/images/apple.png'),
+                ],
+              ),
+
+              const SizedBox(height: 50),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text('Nie masz konta?'),
+
+              const SizedBox(height: 50),
+                Text(' Zarejestruj się teraz!',
+                style: TextStyle(
+                  color: Colors.blue, fontWeight: FontWeight.bold),
+                  ),
+              ])
             ],
             ),
         ),
