@@ -111,7 +111,11 @@ class LoginPage extends StatelessWidget
                 children: [
                   // google button
                  SquareTile(imagePath: 'lib/images/google.png'),
-                  
+
+                 // apple button
+                 const SizedBox(width: 10),
+                 
+                 SquareTile(imagePath: 'lib/images/apple.png'),
                 ],
               ),
             ],
