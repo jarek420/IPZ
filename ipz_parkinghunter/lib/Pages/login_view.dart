@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
+import 'package:ipz_parkinghunter/components/login_square_tile.dart';
 
 class LoginPage extends StatelessWidget
 {
@@ -89,7 +90,7 @@ class LoginPage extends StatelessWidget
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Or continue with',
+                        'Lub zaloguj sie za pomoca',
                         style: TextStyle(color: Color.fromARGB(255, 107, 107, 107)),
                       ),
                     ),
@@ -101,6 +102,17 @@ class LoginPage extends StatelessWidget
                     ),
                   ],
                 ),
+              ),
+
+              const SizedBox(height: 50),
+
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // google button
+                 SquareTile(imagePath: 'lib/images/google.png'),
+                  
+                ],
               ),
             ],
             ),
