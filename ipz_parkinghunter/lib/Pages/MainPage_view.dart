@@ -7,7 +7,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(247, 247, 247, 247),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color.fromARGB(247, 28, 156, 56),
+        backgroundColor: Color.fromARGB(247, 15, 101, 158),
         title: Text(
           'version 1.0',
           style: TextStyle(
@@ -28,7 +28,7 @@ class MainPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Color.fromARGB(255, 15, 221, 176),
                       ),
                       child: Center(
                         child: Text(
@@ -37,7 +37,7 @@ class MainPage extends StatelessWidget {
                             color: Colors.white,
                             fontFamily: 'Arial',
                             fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                         ),
                       ),
