@@ -59,6 +59,7 @@ class LoginPage extends StatelessWidget
               ),
 
               const SizedBox(height: 10),
+
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -69,7 +70,8 @@ class LoginPage extends StatelessWidget
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              
+              const SizedBox(height: 25),
 
               LoginButton(
                 onTap: SignUserIn,
