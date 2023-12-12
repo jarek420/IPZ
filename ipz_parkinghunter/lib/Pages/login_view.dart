@@ -113,11 +113,25 @@ class LoginPage extends StatelessWidget
                  SquareTile(imagePath: 'lib/images/google.png'),
 
                  // apple button
-                 const SizedBox(width: 10),
-                 
+                 const SizedBox(width: 25),
+
                  SquareTile(imagePath: 'lib/images/apple.png'),
                 ],
               ),
+
+              const SizedBox(height: 50),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text('Nie masz konta?'),
+
+              const SizedBox(height: 50),
+                Text(' Zarejestruj się teraz!',
+                style: TextStyle(
+                  color: Colors.blue, fontWeight: FontWeight.bold),
+                  ),
+              ])
             ],
             ),
         ),
