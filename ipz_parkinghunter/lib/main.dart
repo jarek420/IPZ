@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Pages/login_view.dart';
+import 'Pages/MainPage_view.dart';
 
 void main()
 {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // Setting the LoginPage as a starting Page.
-      home: LoginPage(),
+      home: MainPage(),
     );
   }
 }
