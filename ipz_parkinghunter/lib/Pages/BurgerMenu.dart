@@ -38,7 +38,7 @@ class BurgerMenu extends StatelessWidget {
               //TBD
             },
             leading: Icon(Icons.home),
-            title: Text("HomePage", style: TextStyle(fontSize: 16)),
+            title: Text("Home Page", style: TextStyle(fontSize: 16)),
           ),
           ListTile(
             onTap: () {
@@ -47,7 +47,7 @@ class BurgerMenu extends StatelessWidget {
               //TBD 
             },
             leading: Icon(Icons.search),
-            title: Text("Szukaj", style: TextStyle(fontSize: 16)),
+            title: Text("Search", style: TextStyle(fontSize: 16)),
           ),
           ListTile(
             onTap: () {
@@ -55,17 +55,19 @@ class BurgerMenu extends StatelessWidget {
               Navigator.pop(context); // 
               // TBD
             },
-            leading: Icon(Icons.apple_rounded),
-            title: Text("TBD", style: TextStyle(fontSize: 16)),
+            leading: Icon(Icons.local_parking),
+            title: Text("Parking lot", style: TextStyle(fontSize: 16)),
           ),
+          Divider(color: Colors.black,), //to separate main functions from help ones
           ListTile(
             onTap: () {
               
               Navigator.pop(context); 
               
             },
-            leading: Icon(Icons.hot_tub),
-            title: Text("TBD", style: TextStyle(fontSize: 16)),
+            
+            leading: Icon(Icons.bug_report),
+            title: Text("Report Bug", style: TextStyle(fontSize: 16)),
           ),
         ],
       ),
