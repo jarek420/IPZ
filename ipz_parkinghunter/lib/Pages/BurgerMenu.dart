@@ -42,8 +42,8 @@ class BurgerMenu extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-                                      // 
-              Navigator.pop(context); // 
+                                       
+              Navigator.pop(context);  
               //TBD 
             },
             leading: Icon(Icons.search),
@@ -51,8 +51,8 @@ class BurgerMenu extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-                                      //
-              Navigator.pop(context); // 
+                                      
+              Navigator.pop(context);  
               // TBD
             },
             leading: Icon(Icons.local_parking),
