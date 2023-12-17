@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // Setting the LoginPage as a starting Page.
-      home: LoginPage(),
+      home: MainPage(),
     );
   }
 }

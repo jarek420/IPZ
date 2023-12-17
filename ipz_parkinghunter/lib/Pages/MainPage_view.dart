@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ipz_parkinghunter/Pages/BurgerMenu.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -18,6 +19,7 @@ class MainPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      drawer: BurgerMenu(),
       body: Column(
         children: [
           Expanded(
@@ -43,7 +45,7 @@ class MainPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
+                 /* Container(
                     width: 200, 
                     decoration: BoxDecoration(
                       color: Colors.blue, //  color advertisement box
@@ -59,7 +61,7 @@ class MainPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
