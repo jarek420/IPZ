@@ -10,7 +10,7 @@ class MainPage extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: Color.fromARGB(247, 15, 101, 158),
         title: Text(
-          'version 1.0',
+          'version 1.0.1',
           style: TextStyle(
             fontFamily: 'Arial',
             color: Colors.white,
@@ -19,7 +19,7 @@ class MainPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      drawer: BurgerMenu(),
+      drawer: BurgerMenu(), //assigned BurgerMenu into our MainPage
       body: Column(
         children: [
           Expanded(
@@ -39,29 +39,11 @@ class MainPage extends StatelessWidget {
                             color: Colors.white,
                             fontFamily: 'Arial',
                             fontSize: 24,
-                            
                           ),
                         ),
                       ),
                     ),
                   ),
-                 /* Container(
-                    width: 200, 
-                    decoration: BoxDecoration(
-                      color: Colors.blue, //  color advertisement box
-                    ),
-                    // Add your Menu content here
-                    child: Center(
-                      child: Text(
-                        'Menu',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Arial',
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),*/
                 ],
               ),
             ),
