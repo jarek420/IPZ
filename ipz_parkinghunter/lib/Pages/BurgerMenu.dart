@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class BurgerMenu extends StatelessWidget {
+
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -24,8 +27,7 @@ class BurgerMenu extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  "Admin Admin",
+                Text( user.email!,
                   style: TextStyle(color: Colors.white, fontSize: 26),
                 )
               ],
@@ -60,11 +62,9 @@ class BurgerMenu extends StatelessWidget {
           ),
           Divider(color: Colors.black,), //to separate main functions from help ones
           ListTile(
-            onTap: () {
-              
-              Navigator.pop(context); 
-              
-            },
+            onTap: () {            
+              Navigator.pop(context);          
+            },          
             
             leading: Icon(Icons.bug_report),
             title: Text("Report Bug", style: TextStyle(fontSize: 16)),
