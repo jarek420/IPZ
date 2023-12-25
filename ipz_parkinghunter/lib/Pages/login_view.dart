@@ -4,21 +4,37 @@ import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
 import 'package:ipz_parkinghunter/components/login_square_tile.dart';
 
-class LoginPage extends StatelessWidget
+class LoginPage extends StatefulWidget
 {
   LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   // text editting controllers
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   // sign user in method
   void SignUserIn() async{
+    // Loading circle
+    showDialog(context: context,
+               builder:(context) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+      }
+    );
+
+    // Signing in
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: emailController.text, 
       password: passwordController.text,
       );
   }
+
   @override
   Widget build(BuildContext context)
   {
