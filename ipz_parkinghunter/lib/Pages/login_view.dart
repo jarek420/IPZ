@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
@@ -8,11 +9,16 @@ class LoginPage extends StatelessWidget
   LoginPage({super.key});
 
   // text editting controllers
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   // sign user in method
-  void SignUserIn() {}
+  void SignUserIn() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text, 
+      password: passwordController.text,
+      );
+  }
   @override
   Widget build(BuildContext context)
   {
@@ -42,10 +48,10 @@ class LoginPage extends StatelessWidget
 
               const SizedBox(height: 25),
 
-              // Username field
+              // Email field
               LoginTextField(
-                controller: usernameController,
-                hintText: 'Login',
+                controller: emailController,
+                hintText: 'Email',
                 obscureText: false,
               ),
               
