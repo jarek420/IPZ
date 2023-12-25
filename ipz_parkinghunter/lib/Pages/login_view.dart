@@ -25,16 +25,53 @@ class _LoginPageState extends State<LoginPage> {
       return const Center(
         child: CircularProgressIndicator(),
       );
-      }
+     }
     );
 
     // Signing in
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: emailController.text, 
       password: passwordController.text,
       );
 
       Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      Navigator.pop(context);
+      // Wrong email or password
+      if (e.code == 'user-not-found')
+      {
+        wrongDataMessage();
+      }
+      else if(e.code == 'wrong-password')
+      {
+        wrongPasswordMessage();
+      }
+    }
+  }
+
+  void wrongDataMessage()
+  {
+    showDialog(
+      context: context, 
+      builder: (context){
+       return const AlertDialog(
+          title: Text("Nieprawidlowe dane do logowania"),
+        );
+      },
+    );
+  }
+
+  void wrongPasswordMessage()
+  {
+    showDialog(
+      context: context, 
+      builder: (context){
+       return const AlertDialog(
+          title: Text("Nieprawidlowe dane do logowania"),
+        );
+      },
+    );
   }
 
   @override

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'Pages/login_view.dart';
-import 'Pages/MainPage_view.dart';
 import 'Pages/auth_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
