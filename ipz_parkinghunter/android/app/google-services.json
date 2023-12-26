@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "630395591429",
+    "project_id": "ipzparkinghunter-30f5b",
+    "storage_bucket": "ipzparkinghunter-30f5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630395591429:android:46e4ec1bdde0a2d3f4356c",
+        "android_client_info": {
+          "package_name": "com.example.ipz_parkinghunter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7MZszEW049XejNIEqMVvEj2UetQf5U30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

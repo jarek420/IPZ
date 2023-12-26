@@ -1,7 +1,3 @@
-# IPZ
-HE HE MUALA
-
-Branch test 
-
-Schemat działania z czynnościami użytkowników
-(15.11.2023) 
+Admin account to log in functionality testing 
+email - admin@gmail.com
+password - admin123

@@ -1,18 +1,80 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ipz_parkinghunter/components/login_button.dart';
 import 'package:ipz_parkinghunter/components/login_password_boxes.dart';
 import 'package:ipz_parkinghunter/components/login_square_tile.dart';
 
-class LoginPage extends StatelessWidget
+class LoginPage extends StatefulWidget
 {
   LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   // text editting controllers
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   // sign user in method
-  void SignUserIn() {}
+  void SignUserIn() async{
+    // Loading circle
+    showDialog(context: context,
+               builder:(context) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+     }
+    );
+
+    // Signing in
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text, 
+      password: passwordController.text,
+      );
+
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      Navigator.pop(context);
+      // Wrong email or password
+      // For now the if instruction does not working
+      if (e.code == 'user-not-found')
+      {
+        wrongDataMessage();
+      }
+      else if(e.code == 'wrong-password')
+      {
+        wrongPasswordMessage();
+      }
+    }
+  }
+
+  void wrongDataMessage()
+  {
+    showDialog(
+      context: context, 
+      builder: (context){
+       return const AlertDialog(
+          title: Text("Nieprawidlowe dane do logowania"),
+        );
+      },
+    );
+  }
+
+  void wrongPasswordMessage()
+  {
+    showDialog(
+      context: context, 
+      builder: (context){
+       return const AlertDialog(
+          title: Text("Nieprawidlowe dane do logowania"),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context)
   {
@@ -42,10 +104,10 @@ class LoginPage extends StatelessWidget
 
               const SizedBox(height: 25),
 
-              // Username field
+              // Email field
               LoginTextField(
-                controller: usernameController,
-                hintText: 'Login',
+                controller: emailController,
+                hintText: 'Email',
                 obscureText: false,
               ),
               
