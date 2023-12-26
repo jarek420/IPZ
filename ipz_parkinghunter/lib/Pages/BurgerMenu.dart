@@ -27,7 +27,7 @@ class BurgerMenu extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "AA",
+                      "AA",//profile icon 
                       style: TextStyle(fontSize: 26),
                     ),
                   ),
