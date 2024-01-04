@@ -7,7 +7,7 @@ class BurgerMenu extends StatelessWidget {
   void SignUserOut() {
     FirebaseAuth.instance.signOut();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -105,7 +105,6 @@ class BurgerMenu extends StatelessWidget {
             title: Text("Pomoc", style: TextStyle(fontSize: 16)),
           ),
           Divider(
-            
             color: Color.fromARGB(255, 107, 107, 107),
           ), // to separate main functions from help ones
           ListTile(
