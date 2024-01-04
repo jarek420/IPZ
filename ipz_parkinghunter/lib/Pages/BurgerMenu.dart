@@ -14,7 +14,7 @@ class BurgerMenu extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader( // About user in sidebar
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(color: Color.fromARGB(255, 107, 107, 107)),//login backgorund 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, // Circle cut and align "AA" to the left top
               children: [
@@ -27,7 +27,7 @@ class BurgerMenu extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "AA",
+                      "AA",//profile icon 
                       style: TextStyle(fontSize: 26),
                     ),
                   ),
@@ -46,7 +46,7 @@ class BurgerMenu extends StatelessWidget {
               // TBD
             },
             leading: Icon(Icons.home),
-            title: Text("Home Page", style: TextStyle(fontSize: 16)),
+            title: Text("Strona główna", style: TextStyle(fontSize: 16)),
           ),
           ListTile(
             onTap: () {
@@ -54,7 +54,7 @@ class BurgerMenu extends StatelessWidget {
               // TBD
             },
             leading: Icon(Icons.search),
-            title: Text("Search", style: TextStyle(fontSize: 16)),
+            title: Text("Wyszukaj", style: TextStyle(fontSize: 16)),
           ),
           ListTile(
             onTap: () {
@@ -62,10 +62,50 @@ class BurgerMenu extends StatelessWidget {
               // TBD
             },
             leading: Icon(Icons.local_parking),
-            title: Text("Parking lot", style: TextStyle(fontSize: 16)),
+            title: Text("Parking", style: TextStyle(fontSize: 16)),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+              // TBD
+            },
+            leading: Icon(Icons.access_time),
+            title: Text("Historia płatności", style: TextStyle(fontSize: 16)),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+              // TBD
+            },
+            leading: Icon(Icons.shopping_cart),
+            title: Text("Kup Premium", style: TextStyle(fontSize: 16)),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+              // TBD
+            },
+            leading: Icon(Icons.settings),
+            title: Text("Ustawienia", style: TextStyle(fontSize: 16)),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+              // TBD
+            },
+            leading: Icon(Icons.person),
+            title: Text("Moje Dane", style: TextStyle(fontSize: 16)),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+              // TBD
+            },
+            leading: Icon(Icons.question_mark),
+            title: Text("Pomoc", style: TextStyle(fontSize: 16)),
           ),
           Divider(
-            color: Colors.black,
+            color: Color.fromARGB(255, 107, 107, 107),
           ), // to separate main functions from help ones
           ListTile(
             onTap: () {
@@ -73,7 +113,7 @@ class BurgerMenu extends StatelessWidget {
               // TBD
             },
             leading: Icon(Icons.bug_report),
-            title: Text("Report Bug", style: TextStyle(fontSize: 16)),
+            title: Text("Zgłoś błąd", style: TextStyle(fontSize: 16)),
           ),
           ListTile(
             onTap: () {
@@ -81,7 +121,7 @@ class BurgerMenu extends StatelessWidget {
               Navigator.pop(context);
             },
             leading: Icon(Icons.logout),
-            title: Text("Wyloguj sie", style: TextStyle(fontSize: 16)),
+            title: Text("Wyloguj się", style: TextStyle(fontSize: 16)),
           ),
         ],
       ),
