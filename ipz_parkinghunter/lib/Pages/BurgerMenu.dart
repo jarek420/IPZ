@@ -124,7 +124,6 @@ class BurgerMenu extends StatelessWidget {
             title: Text("Wyloguj się", style: TextStyle(fontSize: 16)),
           ),
         ],
-      
       ),
     );
   }
