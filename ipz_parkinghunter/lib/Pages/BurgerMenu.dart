@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:ipz_parkinghunter/Pages/BugReportPage/BugReportView.dart';
+import 'package:ipz_parkinghunter/Pages/BugReportView.dart';
 
 class BurgerMenu extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
