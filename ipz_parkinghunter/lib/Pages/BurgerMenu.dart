@@ -1,11 +1,21 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:ipz_parkinghunter/Pages/BugReportPage/BugReportView.dart';
 
 class BurgerMenu extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
   
   void SignUserOut() {
     FirebaseAuth.instance.signOut();
+  }
+
+  void ReportBug(BuildContext context){
+    //Open BugReport Page
+    Navigator.push(context, 
+    MaterialPageRoute(
+      builder: (context)=>BugReportView()
+      ),
+      );
   }
 
   @override
@@ -109,7 +119,7 @@ class BurgerMenu extends StatelessWidget {
           ), // to separate main functions from help ones
           ListTile(
             onTap: () {
-              Navigator.pop(context);
+              ReportBug(context);
               // TBD
             },
             leading: Icon(Icons.bug_report),
