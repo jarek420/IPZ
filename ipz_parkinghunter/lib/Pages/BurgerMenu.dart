@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:ipz_parkinghunter/Pages/BugReportView.dart';
 
 class BurgerMenu extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
@@ -8,13 +9,22 @@ class BurgerMenu extends StatelessWidget {
     FirebaseAuth.instance.signOut();
   }
 
+  void ReportBug(BuildContext context){
+    //Open BugReport Page
+    Navigator.push(context, 
+    MaterialPageRoute(
+      builder: (context)=>BugReportView()
+      ),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         children: [
           DrawerHeader( // About user in sidebar
-            decoration: BoxDecoration(color: Color.fromARGB(255, 107, 107, 107)),//login backgorund 
+            decoration: BoxDecoration(color: Color.fromARGB(247, 15, 101, 158)),//login backgorund 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, // Circle cut and align "AA" to the left top
               children: [
@@ -109,7 +119,7 @@ class BurgerMenu extends StatelessWidget {
           ), // to separate main functions from help ones
           ListTile(
             onTap: () {
-              Navigator.pop(context);
+              ReportBug(context);
               // TBD
             },
             leading: Icon(Icons.bug_report),
