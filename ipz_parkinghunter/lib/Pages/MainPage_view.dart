@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ipz_parkinghunter/Pages/BurgerMenu.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart'; // Add this line
 
 class MainPage extends StatelessWidget {
   @override
@@ -32,14 +33,12 @@ class MainPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 15, 221, 176),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Map',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Arial',
-                            fontSize: 24,
-                          ),
+                      child: GoogleMap(
+                        // Replace 'Text' widget with 'GoogleMap'
+                        initialCameraPosition: CameraPosition(
+                          target: LatLng(53.447242736816406,
+                              14.492215156555176), // You can change this with your desired coordinates
+                          zoom: 10,
                         ),
                       ),
                     ),
