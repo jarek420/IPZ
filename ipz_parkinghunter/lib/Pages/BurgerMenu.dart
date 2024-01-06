@@ -24,7 +24,7 @@ class BurgerMenu extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader( // About user in sidebar
-            decoration: BoxDecoration(color: Color.fromARGB(255, 107, 107, 107)),//login backgorund 
+            decoration: BoxDecoration(color: Color.fromARGB(247, 15, 101, 158)),//login backgorund 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, // Circle cut and align "AA" to the left top
               children: [
