@@ -38,7 +38,7 @@ class MainPage extends StatelessWidget {
                   child: GoogleMap(
                     initialCameraPosition: CameraPosition(
                       target: LatLng(53.447242736816406, 14.492215156555176),
-                      zoom: 10,
+                      zoom: 16,
                     ),
                   ),
                 ),
